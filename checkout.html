@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout - KimTae M8</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- Distraction-Free Header -->
+    <header class="checkout-header">
+        <div class="container">
+            <a href="index.html" class="logo">KIMTAE</a>
+        </div>
+    </header>
+
+    <div class="container checkout-container">
+        <div class="checkout-grid">
+
+            <!-- LEFT COLUMN: Information -->
+            <div class="checkout-form-col">
+
+                <!-- Choose Your Package -->
+                <div class="form-section">
+                    <h2>Choose Your Package</h2>
+                    <div class="package-list">
+
+                        <!-- Option 1 -->
+                        <div class="package-option" onclick="selectPackage(1)">
+                            <div class="pkg-radio">
+                                <div class="radio-circle"></div>
+                            </div>
+                            <div class="pkg-img">
+                                <img src="images/checkout_product.png" alt="KimTae M8 (Black)">
+                            </div>
+                            <div class="pkg-info">
+                                <div class="pkg-title">1x KimTae M8</div>
+                                <div class="pkg-subtitle">+ FREE SHIPPING</div>
+                            </div>
+                            <div class="pkg-pricing">
+                                <div class="pkg-old-price">$249.88</div>
+                                <div class="pkg-current-price">$99.95<span>/each</span></div>
+                                <div class="pkg-save-badge">SAVE 60%</div>
+                            </div>
+                        </div>
+
+                        <!-- Option 2 -->
+                        <div class="package-option" onclick="selectPackage(2)">
+                            <div class="pkg-radio">
+                                <div class="radio-circle"></div>
+                            </div>
+                            <div class="pkg-img">
+                                <img src="images/hero_slide_0_opt_1769759491605.png" alt="2x Pair">
+                            </div>
+                            <div class="pkg-info">
+                                <div class="pkg-title">2x KimTae M8</div>
+                                <div class="pkg-subtitle">+ FREE SHIPPING</div>
+                            </div>
+                            <div class="pkg-pricing">
+                                <div class="pkg-old-price">$499.75</div>
+                                <div class="pkg-current-price">$86.99<span>/each</span></div>
+                                <div class="pkg-save-badge">SAVE 65%</div>
+                            </div>
+                        </div>
+
+                        <!-- Option 3 (Best Seller) -->
+                        <div class="package-option selected popular" onclick="selectPackage(3)">
+                            <div class="badge-label">BEST SELLER</div>
+                            <div class="pkg-radio">
+                                <div class="radio-circle checked"></div>
+                            </div>
+                            <div class="pkg-img">
+                                <img src="images/hero_slide_0_opt_1769759491605.png" alt="3x Pair">
+                            </div>
+                            <div class="pkg-info">
+                                <div class="pkg-title">3x KimTae M8</div>
+                                <div class="pkg-subtitle">+ FREE SHIPPING</div>
+                            </div>
+                            <div class="pkg-pricing">
+                                <div class="pkg-old-price">$832.92</div>
+                                <div class="pkg-current-price">$82.95<span>/each</span></div>
+                                <div class="pkg-save-badge">SAVE 70%</div>
+                            </div>
+                        </div>
+
+                        <!-- Option 4 (Best Value) -->
+                        <div class="package-option value" onclick="selectPackage(4)">
+                            <div class="badge-label value-label">BEST VALUE</div>
+                            <div class="pkg-radio">
+                                <div class="radio-circle"></div>
+                            </div>
+                            <div class="pkg-img">
+                                <img src="images/hero_slide_0_opt_1769759491605.png" alt="4x Pair">
+                            </div>
+                            <div class="pkg-info">
+                                <div class="pkg-title">4x KimTae M8</div>
+                                <div class="pkg-subtitle">+ FREE SHIPPING</div>
+                            </div>
+                            <div class="pkg-pricing">
+                                <div class="pkg-old-price">$1,249.38</div>
+                                <div class="pkg-current-price">$80.25<span>/each</span></div>
+                                <div class="pkg-save-badge">SAVE 75%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Contact Information</h2>
+                    <input type="email" placeholder="Email address" class="form-input">
+
+                    <h2>Shipping Address</h2>
+                    <div class="form-row">
+                        <input type="text" placeholder="First name" class="form-input">
+                        <input type="text" placeholder="Last name" class="form-input">
+                    </div>
+                    <input type="text" placeholder="Address" class="form-input">
+                    <input type="text" placeholder="Apartment, suite, etc. (optional)" class="form-input">
+                    <div class="form-row">
+                        <input type="text" placeholder="City" class="form-input">
+                        <input type="text" placeholder="Postal code" class="form-input">
+                    </div>
+                    <input type="text" placeholder="Phone" class="form-input">
+                </div>
+
+                <div class="form-section">
+                    <h2>Payment</h2>
+                    <div class="payment-box">
+                        <!-- PayPal Option Selected -->
+                        <div class="payment-option selected" style="border-bottom: 1px solid #e2e8f0;">
+                            <div class="payment-header-radio">
+                                <input type="radio" name="payment" checked>
+                                <span style="font-weight: 700; margin-left: 10px;">PayPal</span>
+                            </div>
+                            <div class="payment-icons">
+                                <i class="fab fa-paypal" style="color: #003087;"></i>
+                            </div>
+                        </div>
+
+                        <!-- PayPal Body -->
+                        <div class="payment-body" style="background: #f8fafc; text-align: center; padding: 30px;">
+                            <i class="fab fa-paypal" style="font-size: 48px; color: #003087; margin-bottom: 15px;"></i>
+                            <p style="color: #64748b; font-size: 14px; margin-bottom: 20px;">
+                                After clicking "Pay Now", you will be redirected to PayPal to complete your purchase
+                                securely.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-primary-checkout">Pay Now</button>
+                <div class="secure-badge">
+                    <i class="fas fa-lock"></i> Secure 256-bit SSL Encrypted Payment
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Order Summary -->
+            <div class="order-summary-col">
+                <div class="order-card">
+
+                    <!-- Urgency Elements -->
+                    <div class="urgency-stack">
+                        <!-- 1. Stock Warning -->
+                        <div class="urgency-box stock-box">
+                            <div class="stock-text">
+                                <strong>Only <span class="highlight-red">5 items</span></strong> Left in Stock!
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Discount Applied -->
+                        <div class="urgency-box discount-box">
+                            <i class="fas fa-tags"></i>
+                            <span>Your <strong>20% Discount</strong> Has Been Applied</span>
+                        </div>
+
+                        <!-- 3. Timer -->
+                        <div class="urgency-box timer-box">
+                            <i class="fas fa-clock"></i>
+                            <span>Hurry! Your discount is reserved for <strong id="timer">10:00</strong> minutes!</span>
+                        </div>
+                    </div>
+
+                    <div class="product-preview">
+                        <div class="prod-img-wrapper">
+                            <img src="images/checkout_product.png" alt="KimTae M8">
+                            <span class="qty-badge">1</span>
+                        </div>
+                        <div class="prod-details">
+                            <h3>KimTae M8 AI Translator</h3>
+                            <p>Black / Standard</p>
+                        </div>
+                        <div class="prod-price">$129.99</div>
+                    </div>
+
+                    <div class="discount-code">
+                        <input type="text" placeholder="Discount code" value="WELCOME20">
+                        <button class="btn-apply disabled">Applied</button>
+                    </div>
+
+                    <div class="price-breakdown">
+                        <div class="row">
+                            <span>Subtotal</span>
+                            <span>$129.99</span>
+                        </div>
+                        <div class="row highlight">
+                            <span>Discount (20% OFF)</span>
+                            <span>-$26.00</span>
+                        </div>
+                        <div class="row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+
+                    <div class="total-row">
+                        <span>Total</span>
+                        <div class="total-price">
+                            <span class="currency">USD</span>
+                            $103.99
+                        </div>
+                    </div>
+
+                    <div class="guarantee-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <strong>30-Day Money-Back Guarantee</strong>
+                            <p>Try it risk-free. If you don't love it, get a full refund.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+
+</html>

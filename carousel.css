@@ -1,0 +1,136 @@
+/* Hero Carousel Split Layout */
+.hero-image.carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.carousel-wrapper {
+    display: flex;
+    gap: 20px;
+    /* Fixed height on desktop to ensure alignment */
+    height: 500px;
+    width: 100%;
+}
+
+/* Left - Main Stage */
+.main-stage {
+    flex: 1;
+    /* Main image takes remaining space */
+    height: 100%;
+    border-radius: 12px;
+    /* Removed border and background for cleaner look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-stage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure full image visible */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Right - Thumbnails */
+.thumbnail-strip {
+    width: 100px;
+    /* Fixed width for thumbs */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribute thumbs evenly */
+    height: 100%;
+    gap: 10px;
+}
+
+/* Custom Scrollbar for thumbs */
+.thumbnail-strip::-webkit-scrollbar {
+    width: 4px;
+}
+
+.thumbnail-strip::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.thumb {
+    width: 100%;
+    flex: 1;
+    /* Stretch to fill available height */
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    background: #fff;
+    position: relative;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill thumb box */
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    display: block;
+}
+
+.thumb:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thumb:hover img {
+    opacity: 1;
+}
+
+/* Active State */
+.thumb.active {
+    border-color: #1D49E7;
+    /* SonaBlue */
+    box-shadow: 0 0 0 2px rgba(29, 73, 231, 0.2);
+}
+
+.thumb.active img {
+    opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        flex-direction: column;
+        height: auto;
+        /* Auto height for stacking */
+        gap: 15px;
+    }
+
+    .main-stage {
+        width: 100%;
+        height: 350px;
+        /* Fixed mobile height */
+    }
+
+    .thumbnail-strip {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        /* Centered thumbs on mobile */
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .thumb {
+        width: 70px;
+        /* Square thumbs on mobile */
+        height: 70px;
+        flex: none;
+        /* Don't stretch */
+    }
+}

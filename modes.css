@@ -1,0 +1,103 @@
+/* 6-Modes Premium Grid Styling */
+.modes-section {
+    background: #f8f9fc;
+    /* Very subtle cool gray/blue tint */
+    padding: 100px 0;
+}
+
+.modes-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mode-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.mode-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(29, 73, 231, 0.1);
+    /* SonaBlue shadow tint */
+    border-color: rgba(29, 73, 231, 0.1);
+}
+
+.mode-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6efff 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--primary-blue);
+    font-size: 28px;
+    transition: 0.4s;
+}
+
+.mode-card:hover .mode-icon-wrapper {
+    background: var(--primary-blue);
+    color: #fff;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.mode-card h3 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-black);
+}
+
+.mode-card p {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Premium/Pro Badging */
+.badge-pro {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 900;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.premium-mode {
+    background: linear-gradient(to bottom, #fff 0%, #fafbff 100%);
+    border: 1px solid rgba(29, 73, 231, 0.05);
+}
+
+@media (max-width: 992px) {
+    .modes-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .modes-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mode-card {
+        padding: 30px 20px;
+    }
+}

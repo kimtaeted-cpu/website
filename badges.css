@@ -1,0 +1,47 @@
+/* Hero Trust Badges Styling */
+.hero-trust-badges {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.trust-item {
+    text-align: center;
+    flex: 1;
+}
+
+.trust-item i {
+    font-size: 24px;
+    color: #0f172a;
+    /* Dark Navy/Black like reference */
+    margin-bottom: 12px;
+    display: block;
+}
+
+.trust-item span {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    /* Cool Gray */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .hero-trust-badges {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-trust-badges {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}

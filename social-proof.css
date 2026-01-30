@@ -1,0 +1,113 @@
+/* Social Proof Bar Styling */
+.social-proof-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    /* Fully rounded pill shape */
+    margin-bottom: 20px;
+    /* Space above CTA */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    color: #334155;
+    width: auto;
+    max-width: 100%;
+}
+
+.customer-avatars {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-stack {
+    display: flex;
+    align-items: center;
+}
+
+.stack-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+    margin-left: -10px;
+    /* Overlap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stack-img:first-child {
+    margin-left: 0;
+    z-index: 1;
+}
+
+.stack-img:nth-child(2) {
+    z-index: 2;
+}
+
+.stack-img:nth-child(3) {
+    z-index: 3;
+}
+
+/* Adjust check circle to align with images */
+.avatar-stack i {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.customer-count {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.proof-divider {
+    width: 1px;
+    height: 20px;
+    background: #cbd5e1;
+}
+
+.stock-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #166534;
+    /* Green text */
+}
+
+.stock-dot {
+    font-size: 8px;
+    color: #22c55e;
+    /* Bright green dot */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-proof-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .proof-divider {
+        display: none;
+    }
+}

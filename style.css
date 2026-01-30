@@ -6,7 +6,7 @@
     --white: #FFFFFF;
     --gold: #FFC107;
     --font-body: 'Roboto', sans-serif;
-    --font-heading: 'Roboto', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
     --font-cta: 'Poppins', sans-serif;
 }
 
@@ -38,6 +38,15 @@ ul {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
 }
 
 /* Header & Nav */
@@ -107,8 +116,10 @@ nav .container {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    /* Balanced 50/50 split */
+    gap: 40px;
+    /* Reduced gap to maximize space */
     align-items: center;
 }
 
@@ -131,6 +142,7 @@ nav .container {
 }
 
 .hero-content h1 {
+    font-family: var(--font-heading);
     font-size: 42px;
     font-weight: 900;
     line-height: 1.1;
@@ -208,6 +220,7 @@ nav .container {
 }
 
 .section-title-wrap h2 {
+    font-family: var(--font-heading);
     font-size: 32px;
     font-weight: 900;
     position: relative;
@@ -245,6 +258,7 @@ nav .container {
 }
 
 .feature-card h3 {
+    font-family: var(--font-heading);
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -341,8 +355,8 @@ footer {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
 }
 
 .footer-col h3 {

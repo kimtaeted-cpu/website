@@ -8,6 +8,11 @@
     <meta name="description"
         content="KimTae Limited offers cutting-edge AI translation earphones supporting 150+ languages for seamless communication.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modes.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="badges.css">
+    <link rel="stylesheet" href="social-proof.css">
+    <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -26,12 +31,12 @@
         <div class="container">
             <div class="logo">KimTae</div>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#modes">6-Modes</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="checkout.html">Features</a></li>
+                <li><a href="checkout.html">6-Modes</a></li>
+                <li><a href="checkout.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="#contact" class="btn-cta-nav">Order Now</a>
+            <a href="checkout.html" class="btn-cta-nav">ORDER NOW</a>
         </div>
     </nav>
 
@@ -59,10 +64,75 @@
                         <li><i class="fas fa-circle-check"></i> Real-time Instant Translation</li>
                         <li><i class="fas fa-circle-check"></i> 30-Hour Long Battery Life</li>
                     </ul>
-                    <a href="#contact" class="btn-premium">GET 20% OFF NOW</a>
+                    <div class="social-proof-bar">
+                        <div class="customer-avatars">
+                            <div class="avatar-stack">
+                                <!-- AI Generated Avatars -->
+                                <img src="images/avatar_customer_1_1769757999786.png" class="stack-img"
+                                    alt="Customer 1">
+                                <img src="images/avatar_customer_2_1769758035376.png" class="stack-img"
+                                    alt="Customer 2">
+                                <img src="images/avatar_customer_3_1769758069029.png" class="stack-img"
+                                    alt="Customer 3">
+                                <i class="fas fa-check-circle"
+                                    style="color: #22c55e; background: #fff; border: none; font-size: 28px; margin-left: -10px; z-index: 4;"></i>
+                            </div>
+                            <span class="customer-count">8K+ Happy Customers</span>
+                        </div>
+                        <div class="proof-divider"></div>
+                        <div class="stock-status">
+                            <i class="fas fa-circle stock-dot"></i>
+                            <span>In stock and ready to ship</span>
+                        </div>
+                    </div>
+
+                    <a href="checkout.html" class="btn-premium">GET 20% OFF NOW</a>
+
+                    <div class="hero-trust-badges">
+                        <div class="trust-item">
+                            <i class="fas fa-wave-square"></i>
+                            <span>PREMIUM SOUND<br>QUALITY</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>AI-POWERED<br>PRECISION</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>COMFORTABLE,<br>SECURE FIT</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-undo-alt"></i>
+                            <span>30-DAY MONEY-<br>BACK GUARANTEE</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/hero_lifestyle.jpg" alt="KimTae AI Earphones in use">
+                <div class="hero-image carousel-container">
+                    <div class="carousel-wrapper">
+                        <!-- Left: Main Stage -->
+                        <div class="main-stage">
+                            <img id="mainImage" src="images/hero_slide_0.png" alt="KimTae Highlights">
+                        </div>
+
+                        <!-- Right: Thumbnails -->
+                        <div class="thumbnail-strip">
+                            <div class="thumb active" onclick="updateMainImage(0)">
+                                <img src="images/hero_slide_0.png" alt="Thumb 1">
+                            </div>
+                            <div class="thumb" onclick="updateMainImage(1)">
+                                <img src="images/hero_slide_1.png" alt="Thumb 2">
+                            </div>
+                            <div class="thumb" onclick="updateMainImage(2)">
+                                <img src="images/hero_slide_2.png" alt="Thumb 3">
+                            </div>
+                            <div class="thumb" onclick="updateMainImage(3)">
+                                <img src="images/hero_slide_3.png" alt="Thumb 4">
+                            </div>
+                            <div class="thumb" onclick="updateMainImage(4)">
+                                <img src="images/hero_slide_4.png" alt="Thumb 5">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,33 +185,131 @@
                 <span class="section-subtitle">AI Intelligence</span>
                 <h2>6 Advanced Translation Modes</h2>
             </div>
-            <div class="modes-grid">
-                <div class="modes-content">
-                    <div class="mode-list-item">
-                        <h4>Touch Mode</h4>
-                        <p>Perfect for quick conversations. Tap your earbud to speak and hear the response.</p>
+
+            <div class="modes-card-grid">
+                <!-- Basic Modes -->
+                <div class="mode-card">
+                    <div class="mode-icon-wrapper">
+                        <i class="fas fa-fingerprint"></i>
                     </div>
-                    <div class="mode-list-item">
-                        <h4>Speaker mode</h4>
-                        <p>Ideal for asking directions. You wear one earbud, the other person uses the app.</p>
-                    </div>
-                    <div class="mode-list-item">
-                        <h4>Free talk mode</h4>
-                        <p>Natural, continuous conversation for business meetings with two earbud sets.</p>
-                    </div>
-                    <div class="mode-list-item">
-                        <span class="value-added-badge">Value Added</span>
-                        <h4>Offline Mode</h4>
-                        <p>No data? No problem. High-accuracy translation without internet connectivity.</p>
-                    </div>
-                    <div class="mode-list-item">
-                        <span class="value-added-badge">Value Added</span>
-                        <h4>Photo & Video</h4>
-                        <p>Scan menus or translate online videos in real-time through the app.</p>
-                    </div>
+                    <h3>Touch Mode</h3>
+                    <p>Perfect for quick conversations. Tap your earbud to speak and hear the response.</p>
                 </div>
-                <div class="modes-image">
-                    <img src="images/feature_6modes.jpg" alt="KimTae M8 AI 6-Modes">
+
+                <div class="mode-card">
+                    <div class="mode-icon-wrapper">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Speaker Mode</h3>
+                    <p>Ideal for asking directions. You wear one earbud, the other person uses the app.</p>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-icon-wrapper">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Free Talk Mode</h3>
+                    <p>Natural, continuous conversation for business meetings with two earbud sets.</p>
+                </div>
+
+                <!-- Advanced Modes -->
+                <div class="mode-card premium-mode">
+                    <div class="badge-pro">PRO</div>
+                    <div class="mode-icon-wrapper">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Offline Mode</h3>
+                    <p>No data? No problem. High-accuracy translation without internet connectivity.</p>
+                </div>
+
+                <div class="mode-card premium-mode">
+                    <div class="badge-pro">PRO</div>
+                    <div class="mode-icon-wrapper">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photo Translation</h3>
+                    <p>Scan menus or documents. Instant text translation via your phone's camera.</p>
+                </div>
+
+                <div class="mode-card premium-mode">
+                    <div class="badge-pro">PRO</div>
+                    <div class="mode-icon-wrapper">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Translation</h3>
+                    <p>Translate online videos or calls in real-time through the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel/Video Section -->
+    <section class="section video-section">
+        <div class="container">
+            <div class="video-grid">
+                <div class="video-content">
+                    <span class="section-subtitle">Travel Without Barriers</span>
+                    <h2>Experience the World Without Boundaries</h2>
+                    <p>From the bustling streets of Tokyo to the cafés of Paris, KimTae M8 erases language barriers
+                        instantly. Connect deeply, explore freely, and immerse yourself in local culture like never
+                        before.</p>
+                    <a href="checkout.html" class="btn-premium" style="margin-top: 20px;">Get Yours Now</a>
+                </div>
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline class="feature-video">
+                        <source
+                            src="https://cdn.sonabudsshop.com/streamsMigration/videos/23f148b7f811357caa7555bd9dd01c2b.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Connect/Video Section 2 -->
+    <section class="section video-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="video-grid reverse">
+                <div class="video-content">
+                    <span class="section-subtitle">Real-Time Connection</span>
+                    <h2>Experience Deeper, More Human Connections</h2>
+                    <p>Instead of pointing, guessing, or pulling out your phone, just talk. KimTae M8 translates both
+                        sides of the conversation instantly—so nothing gets lost in translation.</p>
+                    <a href="checkout.html" class="btn-premium" style="margin-top: 20px;">Get Yours Now</a>
+                </div>
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline class="feature-video">
+                        <source
+                            src="https://cdn.sonabudsshop.com/streamsMigration/videos/ad9740c38495ac538c256d96dcd9add3.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freedom/Video Section 3 -->
+    <section class="section video-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="video-grid">
+                <div class="video-content">
+                    <span class="section-subtitle">Absolute Freedom</span>
+                    <h2>No Language Classes, Guides, or Roaming Charges</h2>
+                    <p>With offline mode and no subscriptions, KimTae M8 gives you the freedom to communicate without
+                        depending on apps, data, or paid help.</p>
+                    <a href="checkout.html" class="btn-premium" style="margin-top: 20px;">Get Yours Now</a>
+                </div>
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline class="feature-video">
+                        <source
+                            src="https://cdn.sonabudsshop.com/streamsMigration/videos/ba60b5b98b4b63ed21952561f5a1705c.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -169,7 +337,7 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 50px;">
-                <a href="#contact" class="btn-premium">Order Yours Today</a>
+                <a href="checkout.html" class="btn-premium">Order Yours Today</a>
             </div>
         </div>
     </section>
@@ -190,18 +358,22 @@
                     <ul class="footer-contact" style="display: block;">
                         <li><a href="#features">Features</a></li>
                         <li><a href="#modes">Technology</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Privacy</a></li>
+                        <li><a href="terms.html">Support / Terms</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Get In Touch</h3>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Room 1508, 15th Floor, Phase 2, Argyle Centre Office
-                            Tower, 625 Nathan Road, Mong Kok, Hong Kong</li>
-                        <li><i class="fas fa-phone"></i> +852 6411 5669</li>
-                        <li><i class="fas fa-envelope"></i> hello@kimtaeintl.com</li>
-                        <li><i class="fas fa-headset"></i> support@kimtaeintl.com</li>
+                    <h3>Support</h3>
+                    <ul class="footer-contact" style="display: block;">
+                        <li><a href="track.html">Track Your Order</a></li>
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="returns.html">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-contact" style="display: block;">
+                        <li><a href="contact.html" style="font-weight: 700;">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -212,6 +384,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
