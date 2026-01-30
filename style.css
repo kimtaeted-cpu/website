@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #001F3F; /* Navy */
+    --secondary-color: #0074D9; /* Electric Blue */
+    --accent-color: #39CCCC; /* Teal */
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+    --black: #111111;
+    --text-muted: #6C757D;
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--black);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.btn-cta {
+    background: var(--black);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-cta:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero-benefits {
+    margin-bottom: 40px;
+}
+
+.hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.hero-benefits li i {
+    color: var(--secondary-color);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Features */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 15px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: var(--white);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+/* 6-MODES Section */
+.modes-bg {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.modes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.modes-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Contact Footer */
+footer {
+    background: #000;
+    color: #eee;
+    padding: 80px 0 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-col h3 {
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.footer-contact li {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .hero-grid, .modes-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
