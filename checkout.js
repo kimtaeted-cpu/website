@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
         qs('.price-breakdown .row:nth-child(1) span:last-child').textContent = "$" + subtotal;
 
         // Discount
+        const discountMap = { 1: "60%", 2: "65%", 3: "70%", 4: "75%" };
+        qs('.price-breakdown .row:nth-child(2) span:first-child').textContent = `Discount (${discountMap[packageId]} OFF)`;
         qs('.price-breakdown .row:nth-child(2) span:last-child').textContent = "-$" + choice.save.toFixed(2);
 
         // Total
