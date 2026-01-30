@@ -261,26 +261,51 @@ body {
 }
 
 /* Discount Field */
+/* Discount Field */
 .discount-code {
+    position: relative;
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e2e8f0;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .discount-code .form-input {
     margin-bottom: 0;
+    padding-right: 110px;
+    /* Space for the badge */
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #334155;
+    text-transform: uppercase;
 }
 
 .btn-apply {
-    padding: 0 20px;
-    background: #e2e8f0;
-    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 14px;
+    background: #dcfce7;
+    /* Light green success bg */
+    border: 1px solid #bbf7d0;
     border-radius: 6px;
-    color: #64748b;
-    font-weight: 500;
+    color: #15803d;
+    /* Dark green text */
+    font-weight: 700;
+    font-size: 12px;
     cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.btn-apply::before {
+    content: '\f00c';
+    /* FontAwesome check */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
 }
 
 /* Mobile */
