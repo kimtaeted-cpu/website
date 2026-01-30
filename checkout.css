@@ -273,14 +273,28 @@ body {
 }
 
 .discount-code .form-input {
+    width: 100%;
     margin-bottom: 0;
+    padding: 12px 15px;
     padding-right: 110px;
     /* Space for the badge */
-    font-family: monospace;
+    border: 2px dashed #cbd5e1;
+    /* Dashed border for coupon feel */
+    background: #f8fafc;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
     color: #334155;
     text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.discount-code .form-input:focus {
+    outline: none;
+    border-color: #1D49E7;
+    background: #fff;
 }
 
 .btn-apply {
