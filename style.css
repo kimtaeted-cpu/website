@@ -459,4 +459,19 @@ footer {
     .hero-benefits li {
         width: fit-content;
     }
+
+    /* Footer Single-Line Layout on Mobile */
+    .footer-contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        /* Add space between horizontal links */
+        padding: 0;
+    }
+
+    .footer-contact li {
+        margin-bottom: 0;
+        /* Remove vertical gap */
+    }
 }
