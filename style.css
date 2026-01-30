@@ -452,6 +452,8 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 0;
+        /* Remove default browser padding to ensure true centering */
     }
 
     .hero-benefits li {
