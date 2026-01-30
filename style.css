@@ -447,4 +447,14 @@ footer {
     .nav-links {
         display: none;
     }
+
+    .hero-benefits {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-benefits li {
+        width: fit-content;
+    }
 }
