@@ -62,6 +62,34 @@ h6 {
     width: 100%;
     position: relative;
     z-index: 1001;
+    overflow: hidden;
+    /* Hide overflow for marquee */
+}
+
+.top-bar p {
+    margin: 0;
+    display: inline-block;
+}
+
+/* Mobile Marquee Effect */
+@media (max-width: 768px) {
+    .top-bar p {
+        padding-left: 100%;
+        /* Start off-screen */
+        animation: marquee 15s linear infinite;
+        white-space: nowrap;
+        will-change: transform;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
 
 nav {
