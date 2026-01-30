@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.selectPackage = function (packageId) {
         // Data
         const packages = {
-            1: { count: 1, name: "KimTae M8 AI Translator", price: 99.95, save: 26.00 },
-            2: { count: 2, name: "2.0x KimTae M8 (Pair)", price: 173.98, save: 52.00 },
-            3: { count: 3, name: "3.0x KimTae M8 (Family Pack)", price: 248.85, save: 78.00 },
+            1: { count: 1, name: "KimTae M8 AI Translator", price: 48.27, save: 72.41 },
+            2: { count: 2, name: "2.0x KimTae M8 (Pair)", price: 84.48, save: 156.88 },
+            3: { count: 3, name: "3.0x KimTae M8 (Family Pack)", price: 108.61, save: 253.43 },
             4: { count: 4, name: "4.0x KimTae M8 (Enterprise)", price: 120.68, save: 362.04 }
         };
 
