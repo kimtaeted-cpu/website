@@ -51,13 +51,17 @@ h6 {
 
 /* Header & Nav */
 .top-bar {
-    background: #000;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
-    padding: 8px 0;
+    padding: 10px 0;
     font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1001;
 }
 
 nav {
@@ -100,12 +104,22 @@ nav .container {
 }
 
 .btn-cta-nav {
-    border: 2px solid var(--text-black);
-    padding: 8px 20px;
-    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 10px 24px;
+    border-radius: 6px;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    color: #000000;
+    background: transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    line-height: 1;
+}
+
+.btn-cta-nav:hover {
+    background: #000000;
+    color: #ffffff;
 }
 
 /* Hero Section */
@@ -175,9 +189,9 @@ nav .container {
 }
 
 .btn-premium {
-    font-family: var(--font-cta);
-    background: var(--primary-blue);
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1D49E7;
+    color: #ffffff !important;
     padding: 18px 40px;
     border-radius: 10px;
     font-size: 18px;
@@ -187,11 +201,14 @@ nav .container {
     transition: 0.3s;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(29, 73, 231, 0.2);
 }
 
 .btn-premium:hover {
-    background: #000;
-    transform: scale(1.02);
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hero-image img {
