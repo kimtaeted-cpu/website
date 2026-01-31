@@ -16,6 +16,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="checkout.css">
+    <!-- PayPal SDK -->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AXNbnankci9rd7Ez2ZIxFdkD9oj_KyImwiy1oBOxOA510aMFauv-HQBxkXTUNgdB9g4Ci77VY1L67quc&currency=USD&merchant-id=Q7YLWJ79B2D4N"></script>
 </head>
 
 <body>
@@ -160,7 +163,7 @@
                     </div>
                 </div>
 
-                <button class="btn-primary-checkout">Pay Now</button>
+                <div id="paypal-button-container"></div>
                 <div class="secure-badge">
                     <i class="fas fa-lock"></i> Secure 256-bit SSL Encrypted Payment
                 </div>

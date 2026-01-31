@@ -226,6 +226,13 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* PayPal Button Container */
+#paypal-button-container {
+    margin-top: 20px;
+    min-height: 55px;
+    /* Prevent layout shift */
+}
+
 .secure-badge {
     text-align: center;
     margin-top: 15px;

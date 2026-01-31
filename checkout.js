@@ -114,4 +114,54 @@ document.addEventListener('DOMContentLoaded', function () {
         // Product Price Top Right
         qs('.prod-price').textContent = "$" + choice.price.toFixed(2);
     };
+
+    // --- 4. PayPal Smart Payment Buttons ---
+    if (typeof paypal !== 'undefined') {
+        paypal.Buttons({
+            style: {
+                layout: 'vertical',
+                color: 'gold',
+                shape: 'rect',
+                label: 'paypal',
+                height: 55
+            },
+            createOrder: function (data, actions) {
+                // Get current selected package price from the Total display
+                const totalPriceEl = document.querySelector('.total-price');
+                const priceText = totalPriceEl ? totalPriceEl.textContent.replace(/[^0-9.]/g, '') : '48.27';
+                const price = parseFloat(priceText) || 48.27;
+
+                const prodName = document.querySelector('.prod-details h3')?.textContent || 'KimTae M8 AI Translator';
+
+                return actions.order.create({
+                    purchase_units: [{
+                        description: prodName,
+                        amount: {
+                            currency_code: 'USD',
+                            value: price.toFixed(2)
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    // Payment Success!
+                    const payerName = details.payer?.name?.given_name || 'Customer';
+                    alert('✅ Payment Successful!\n\nThank you, ' + payerName + '! Your order has been placed.');
+
+                    // Redirect to homepage with success flag
+                    window.location.href = 'index.html?order=success';
+                });
+            },
+            onCancel: function (data) {
+                console.log('Payment cancelled by user:', data);
+            },
+            onError: function (err) {
+                console.error('PayPal Error:', err);
+                alert('❌ Payment Error\n\nAn error occurred with PayPal. Please try again or contact support.');
+            }
+        }).render('#paypal-button-container');
+    } else {
+        console.error('PayPal SDK not loaded');
+    }
 });
